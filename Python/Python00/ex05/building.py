@@ -1,4 +1,3 @@
-# Comportement avec le space a verifier sur un linux.
 from sys import argv
 
 
@@ -23,16 +22,22 @@ def n_digit_chars(string):
 
 
 def n_punctuation_chars(string):
-    """Takes a string and return the number of punctuation chars in it."""
+    """
+    Takes a string and return the number of punctuation chars in it.
+    """
     punctuation = "!\"#$%&'()*+,-./:;<=>]?@[\\^_`{|}~"
     return sum(1 for c in string if c in punctuation)
 
 
 def main():
     try:
-        assert argv.__len__() < 2, "Too many arguments !"
+        assert argv.__len__() <= 2, "Too many arguments !"
+        str = ""
         if (argv.__len__() == 1):
-            str = input("What is the text to count?\n") + '\n'
+            try:
+                str = input("What is the text to count?\n") + '\n'
+            except EOFError:
+                pass
         else:
             str = argv[1]
         print("The text contains", str.__len__(), "characters:")
