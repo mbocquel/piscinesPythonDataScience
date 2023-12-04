@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def give_bmi(height: list[int | float],
              weight: list[int | float]) -> list[int | float]:
     """
@@ -9,9 +10,9 @@ def give_bmi(height: list[int | float],
     try:
         assert len(height) == len(weight), "height and list of different size"
         assert all(map(lambda i: isinstance(i, (int, float)),
-                    height)), ("some height are not int or float")
+                       height)), ("some height are not int or float")
         assert all(map(lambda i: isinstance(i, (int, float)),
-                    weight)), ("some height are not int or float")
+                       weight)), ("some height are not int or float")
         heightArray = np.array(height)
         weightArray = np.array(weight)
         assert heightArray.min() > 0, "some height are not > 0"
@@ -29,7 +30,7 @@ def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
     """
     try:
         assert all(map(lambda i: isinstance(i, (int, float)),
-                    bmi)), ("some bmi are not int or float")
+                       bmi)), ("some bmi are not int or float")
         assert type(limit) is int, "Limit is not int"
         bmiArray = np.array(bmi)
         limit = bmiArray > limit

@@ -13,7 +13,7 @@ def ft_invert(array: np.ndarray) -> np.ndarray:
     ax.imshow(newArray)
     plt.title("ft_invert")
     plt.show()
-    return(newArray)
+    return (newArray)
 
 
 def ft_red(array: np.ndarray) -> np.ndarray:
@@ -27,7 +27,7 @@ def ft_red(array: np.ndarray) -> np.ndarray:
     ax.imshow(newArray)
     plt.title("ft_red")
     plt.show()
-    return(newArray)
+    return (newArray)
 
 
 def ft_green(array: np.ndarray) -> np.ndarray:
@@ -41,7 +41,7 @@ def ft_green(array: np.ndarray) -> np.ndarray:
     ax.imshow(newArray)
     plt.title("ft_green")
     plt.show()
-    return(newArray)
+    return (newArray)
 
 
 def ft_blue(array: np.ndarray) -> np.ndarray:
@@ -55,7 +55,7 @@ def ft_blue(array: np.ndarray) -> np.ndarray:
     ax.imshow(newArray)
     plt.title("ft_blue")
     plt.show()
-    return(newArray)
+    return (newArray)
 
 
 def ft_grey(array: np.ndarray) -> np.ndarray:
@@ -66,6 +66,7 @@ def ft_grey(array: np.ndarray) -> np.ndarray:
     newArray = np.array(img)
     print(newArray)
     fig, ax = plt.subplots()
-    ax.imshow(newArray, cmap ="grey")
+    ax.imshow(newArray, cmap="grey")
     plt.title("ft_grey")
     plt.show()
+    return (newArray)
