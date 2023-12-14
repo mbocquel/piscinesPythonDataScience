@@ -1,11 +1,10 @@
 from load_csv import load
 import matplotlib.pyplot as plt
-import pandas as pd
 
 
 def main():
     """
-    Program that open the lifeexpectancy 
+    Program that open the lifeexpectancy
     file and display france
     """
     try:
